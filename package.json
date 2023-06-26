@@ -1,0 +1,11 @@
+{
+  "name": "grammarwise",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build -i ./src/styles.css -o ./public/styles.css",
+    "watch": "tailwindcss -i ./src/styles.css -o ./public/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
