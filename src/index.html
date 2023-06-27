@@ -4,9 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grammarwise</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Actor&family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../public/styles.css">
+  <link rel="stylesheet" href="reset.css">
 </head>
 <body>
+  <div class="background block overflow-hidden">
+
+    <header class="header w-full flex flex-col items-center">
+      <div class="flex flex-wrap justify-between items-center w-full max-w-[1280px] px-[17px] py-[15px] lg:px-[90px]">
+        <!-- Logo -->
+        <img src="../public/logo.svg" alt="logo"/>
+        <!-- End Logo -->
+        <!-- Navigation -->
+        <nav class="hidden sm:block">
+          <ul class="flex gap-x-[40px]">
+            <li>About</li>
+            <li>How it work</li>
+            <li>Pricing</li>
+            <li>Solution</li>
+            <li>Features</li>
+          </ul>
+        </nav>
+        <!-- Burger button -->
+        <div class="sm:hidden">
+          <button class="relative group">
+            <div class="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200">
+              <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
+                <div class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:translate-x-10"></div>
+                <div class="bg-white h-[2px] w-7 rounded transform transition-all duration-300 group-focus:translate-x-10 delay-75"></div>
+                <div class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:translate-x-10 delay-150"></div>
+    
+                <div class="absolute items-center justify-between transform transition-all duration-500 top-2.5 -translate-x-10 group-focus:translate-x-0 flex w-0 group-focus:w-12">
+                  <div class="absolute bg-white h-[2px] w-5 transform transition-all duration-500 rotate-0 delay-300 group-focus:rotate-45"></div>
+                  <div class="absolute bg-white h-[2px] w-5 transform transition-all duration-500 -rotate-0 delay-300 group-focus:-rotate-45"></div>
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+        <!-- End Burger button -->
+        <!-- End Navigation -->
+      </div>
+
+      <div class="px-[33px]">
+        <h1 class="mt-[50px] mb-[30px] text-[40px] leading-[50px] font-black max-w-[800px] font-poppins md:text-2xl md:mt-[150px]">
+          Maximize your teaching potential <span class="emphasis">with our innovative toolkit.</span>
+        </h1>
+        <div class="mb-[128px] flex flex-col gap-y-[15px] sm:flex-row">
+          <input class="input bg-[#2B2B2B] h-[52px] px-[16px] py-[14px] rounded sm:w-[300px] sm:rounded-none sm:rounded-l" type="email" placeholder="Your work email address"/>
+          <button class="bg-[#865FDB] h-[70px] px-[24px] py-[14px] rounded text-[16px] sm:h-[52px] sm:w-[144px] sm:text-xs sm:px-[16px] sm:rounded-none sm:rounded-r">Join the waitlist</button>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <p>GrammarwiseAI can extract text from </p>
+          <p>point out mistakes</p>
+          <p>extract text from YouTube videos, books</p>
+          <p>today’s tech-savvy students</p>
+        </div>
+        <div>
+          <p>AI-powered homework generator</p>
+          <p>real-time assistance</p>
+          <p>immersive learning experience</p>
+          <p>learning more enjoyable and effective</p>
+        </div>
+      </div>
+    </header>
+    
+  </div>
   
 </body>
 </html>

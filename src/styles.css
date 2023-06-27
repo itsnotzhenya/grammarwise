@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header {
+  color: #fff;
+}
+
+.background {
+  background-image: linear-gradient(90deg, #464646 0.62%, #1f1f1f 0.62%, #1f1f1f 50%, #464646 50%, #464646 50.62%, #1f1f1f 50.62%, #1f1f1f 100%);
+  background-size: 162.00px 162.00px;
+}
+
+@media (max-width:640px) {
+  .background {
+    background-image: linear-gradient(90deg, #464646 0.41%, #1f1f1f 0.41%, #1f1f1f 50%, #464646 50%, #464646 50.41%, #1f1f1f 50.41%, #1f1f1f 100%);
+    background-size: 280px;
+    background-position: -74px;
+  }
+}
+
+.emphasis {
+  background: -webkit-linear-gradient(rgba(134, 95, 219, 1), rgba(98, 40, 223, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.input::placeholder {
+  color: #f2f2f2;
+  font-size: 14px;
+  line-height: 24px;
+  opacity: 0.5;
+}
