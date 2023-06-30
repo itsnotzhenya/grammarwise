@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Poppins';
+}
+
 .header {
   color: #fff;
+  background-image: url(../public/heroimage-mobile.svg);
+  background-size: 340px 300px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
 }
 
 .background {

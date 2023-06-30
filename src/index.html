@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="reset.css">
 </head>
 <body>
-  <div class="background block overflow-hidden">
-
+  <!-- Header -->
+  <div class="background overflow-x-hidden">
     <header class="header w-full flex flex-col items-center">
       <div class="flex flex-wrap justify-between items-center w-full max-w-[1280px] px-[17px] py-[15px] lg:px-[90px]">
         <!-- Logo -->
@@ -21,11 +21,21 @@
         <!-- Navigation -->
         <nav class="hidden sm:block">
           <ul class="flex gap-x-[40px]">
-            <li>About</li>
-            <li>How it work</li>
-            <li>Pricing</li>
-            <li>Solution</li>
-            <li>Features</li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">How it work</a>
+            </li>
+            <li>
+              <a href="#">Pricing</a>
+            </li>
+            <li>
+              <a href="#">Solution</a>
+            </li>
+            <li>
+              <a href="#">Features</a>
+            </li>
           </ul>
         </nav>
         <!-- Burger button -->
@@ -49,33 +59,56 @@
         <!-- End Navigation -->
       </div>
 
-      <div class="px-[33px]">
+      <div class="px-[33px] mb-[94px] lg:mb-[160px] xl-[130px]">
         <h1 class="mt-[50px] mb-[30px] text-[40px] leading-[50px] font-black max-w-[800px] font-poppins md:text-2xl md:mt-[150px]">
           Maximize your teaching potential <span class="emphasis">with our innovative toolkit.</span>
         </h1>
-        <div class="mb-[128px] flex flex-col gap-y-[15px] sm:flex-row">
+        <div class="flex flex-col gap-y-[15px] sm:flex-row">
           <input class="input bg-[#2B2B2B] h-[52px] px-[16px] py-[14px] rounded sm:w-[300px] sm:rounded-none sm:rounded-l" type="email" placeholder="Your work email address"/>
-          <button class="bg-[#865FDB] h-[70px] px-[24px] py-[14px] rounded text-[16px] sm:h-[52px] sm:w-[144px] sm:text-xs sm:px-[16px] sm:rounded-none sm:rounded-r">Join the waitlist</button>
+          <button class="bg-[#865FDB] h-[70px] px-[24px] py-[14px] rounded text-[16px] sm:h-[52px] sm:w-[144px] sm:text-xs sm:p-[14px] sm:rounded-none sm:rounded-r">Join the waitlist</button>
         </div>
       </div>
 
-      <div>
-        <div>
-          <p>GrammarwiseAI can extract text from </p>
-          <p>point out mistakes</p>
-          <p>extract text from YouTube videos, books</p>
-          <p>today’s tech-savvy students</p>
+      <div class="flex flex-col gap-y-[10px] mb-[20px] lg:mb-[40px] xl:mb-[90px]">
+        <div class="flex flex-row gap-x-[40px]">
+          <div class="flex flex-row items-center shrink-0">
+            <img src="../public/icon8.svg" alt=""/>
+            <p class="text-base font-normal whitespace-nowrap ml-[20px]">GrammarwiseAI can extract text from </p>
+          </div>
+          <div class="flex flex-row items-center shrink-0">
+            <img src="../public/icon7.svg" alt=""/>
+            <p class="text-base font-normal whitespace-nowrap ml-[20px]">point out mistakes</p>
+          </div>
+          <div class="flex flex-row items-center shrink-0">
+            <img src="../public/icon6.svg" alt=""/>
+            <p class="text-base font-normal whitespace-nowrap ml-[20px]">extract text from YouTube videos, books</p>
+          </div>
+          <div class="flex flex-row items-center shrink-0">
+            <img src="../public/icon4.svg" alt=""/>
+            <p class="text-base font-normal whitespace-nowrap ml-[20px]">today’s tech-savvy students</p>
+          </div>
         </div>
-        <div>
-          <p>AI-powered homework generator</p>
-          <p>real-time assistance</p>
-          <p>immersive learning experience</p>
-          <p>learning more enjoyable and effective</p>
+        <div class="flex flex-row gap-x-[40px]">
+          <div class="flex flex-row items-center shrink-0">
+            <img src="../public/icon5.svg" alt=""/>
+            <p class="text-base font-normal whitespace-nowrap ml-[20px]">AI-powered homework generator</p>
+          </div>
+          <div class="flex flex-row items-center shrink-0">
+            <img src="../public/icon3.svg" alt=""/>
+            <p class="text-base font-normal whitespace-nowrap ml-[20px]">real-time assistance</p>
+          </div>
+          <div class="flex flex-row items-center shrink-0">
+            <img src="../public/icon1.svg" alt=""/>
+            <p class="text-base font-normal whitespace-nowrap ml-[20px]">immersive learning experience</p>
+          </div>
+          <div class="flex flex-row items-center shrink-0">
+            <img src="../public/icon2.svg" alt=""/>
+            <p class="text-base font-normal whitespace-nowrap ml-[20px]">learning more enjoyable and effective</p>
+          </div>
         </div>
       </div>
     </header>
-    
   </div>
-  
+  <!-- End Header -->
 </body>
 </html>
