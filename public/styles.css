@@ -551,16 +551,16 @@ video {
   margin-right: 10px;
 }
 
-.mb-\[128px\] {
-  margin-bottom: 128px;
+.mb-\[20px\] {
+  margin-bottom: 20px;
 }
 
 .mb-\[30px\] {
   margin-bottom: 30px;
 }
 
-.mb-\[90px\] {
-  margin-bottom: 90px;
+.mb-\[94px\] {
+  margin-bottom: 94px;
 }
 
 .ml-\[20px\] {
@@ -589,14 +589,6 @@ video {
 
 .mt-\[90px\] {
   margin-top: 90px;
-}
-
-.mb-\[20px\] {
-  margin-bottom: 20px;
-}
-
-.mb-\[94px\] {
-  margin-bottom: 94px;
 }
 
 .flex {
@@ -671,8 +663,8 @@ video {
   max-width: 1280px;
 }
 
-.max-w-\[800px\] {
-  max-width: 800px;
+.max-w-\[600px\] {
+  max-width: 600px;
 }
 
 .shrink-0 {
@@ -730,9 +722,18 @@ video {
   justify-content: space-between;
 }
 
+.gap-x-\[20px\] {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
 .gap-x-\[40px\] {
   -moz-column-gap: 40px;
        column-gap: 40px;
+}
+
+.gap-y-\[10px\] {
+  row-gap: 10px;
 }
 
 .gap-y-\[15px\] {
@@ -741,14 +742,6 @@ video {
 
 .gap-y-\[20px\] {
   row-gap: 20px;
-}
-
-.gap-y-\[30px\] {
-  row-gap: 30px;
-}
-
-.gap-y-\[10px\] {
-  row-gap: 10px;
 }
 
 .overflow-hidden {
@@ -849,11 +842,6 @@ video {
 .py-\[30px\] {
   padding-top: 30px;
   padding-bottom: 30px;
-}
-
-.px-\[18px\] {
-  padding-left: 18px;
-  padding-right: 18px;
 }
 
 .text-center {
@@ -961,19 +949,37 @@ body {
   background-image: url(../public/heroimage-mobile.svg);
   background-size: 340px 300px;
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: right -65px bottom;
 }
 
 .background {
-  background-image: linear-gradient(90deg, #464646 0.62%, #1f1f1f 0.62%, #1f1f1f 50%, #464646 50%, #464646 50.62%, #1f1f1f 50.62%, #1f1f1f 100%);
-  background-size: 162.00px 162.00px;
+  background-image: linear-gradient(90deg, #464646 0.41%, #1f1f1f 0.41%, #1f1f1f 50%, #464646 50%, #464646 50.41%, #1f1f1f 50.41%, #1f1f1f 100%);
+  background-size: 280px;
+  background-position: -74px;
 }
 
-@media (max-width:640px) {
+@media (min-width: 640px) {
   .background {
-    background-image: linear-gradient(90deg, #464646 0.41%, #1f1f1f 0.41%, #1f1f1f 50%, #464646 50%, #464646 50.41%, #1f1f1f 50.41%, #1f1f1f 100%);
-    background-size: 280px;
-    background-position: -74px;
+    background-image: linear-gradient(90deg, #464646 0.62%, #1f1f1f 0.62%, #1f1f1f 50%, #464646 50%, #464646 50.62%, #1f1f1f 50.62%, #1f1f1f 100%);
+    background-size: 162px 162px;
+  }
+
+  .header {
+    background-image: linear-gradient(180deg, rgba(31, 31, 31, 0.00) 0%, #1F1F1F 100%), url(../public/heroimage-desktop.svg);
+    background-size: 530px 230px, 480px 420px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    background-size: 530px 410px, 680px 620px;
+    background-position: right bottom, right -135px bottom 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    background-position: right bottom, right -120px bottom 130px;
   }
 }
 
@@ -1076,11 +1082,6 @@ body {
     padding: 14px;
   }
 
-  .sm\:px-\[16px\] {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
   .sm\:text-xs {
     font-size: 14px;
     line-height: 21px;
@@ -1089,34 +1090,60 @@ body {
 }
 
 @media (min-width: 768px) {
-  .md\:mt-\[150px\] {
-    margin-top: 150px;
-  }
-
-  .md\:text-2xl {
-    font-size: 62px;
-    line-height: 93px;
-    font-weight: 800;
+  .md\:gap-x-\[40px\] {
+    -moz-column-gap: 40px;
+         column-gap: 40px;
   }
 }
 
 @media (min-width: 1024px) {
+  .lg\:mb-\[160px\] {
+    margin-bottom: 160px;
+  }
+
   .lg\:mb-\[40px\] {
     margin-bottom: 40px;
   }
 
-  .lg\:mb-\[160px\] {
-    margin-bottom: 160px;
+  .lg\:mt-\[110px\] {
+    margin-top: 110px;
+  }
+
+  .lg\:max-w-\[800px\] {
+    max-width: 800px;
   }
 
   .lg\:px-\[90px\] {
     padding-left: 90px;
     padding-right: 90px;
   }
+
+  .lg\:py-\[30px\] {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .lg\:text-2xl {
+    font-size: 62px;
+    line-height: 120%;
+    font-weight: 800;
+  }
 }
 
 @media (min-width: 1280px) {
   .xl\:mb-\[90px\] {
+    margin-bottom: 90px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .min-\[1440px\]\:mb-\[90px\] {
+    margin-bottom: 90px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:mb-\[90px\] {
     margin-bottom: 90px;
   }
 }
