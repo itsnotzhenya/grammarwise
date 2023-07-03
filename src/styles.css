@@ -36,6 +36,43 @@ body {
     background-size: 530px 410px, 680px 620px;
     background-position: right bottom, right -135px bottom 30px;
   }
+  .interface-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 8px;
+    row-gap: 10px;
+  }
+  .interface-card {
+    margin: 0;
+  }
+  .interface-card:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+  }
+  .interface-card:last-child {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    width: 100%;
+  }
+  .personalized-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 210px);
+    column-gap: 8px;
+    row-gap: 8px;
+  }
+  .personalized-card:first-child {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  .personalized-card:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -48,11 +85,4 @@ body {
   background: -webkit-linear-gradient(rgba(134, 95, 219, 1), rgba(98, 40, 223, 1));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.input::placeholder {
-  color: #f2f2f2;
-  font-size: 14px;
-  line-height: 24px;
-  opacity: 0.5;
 }

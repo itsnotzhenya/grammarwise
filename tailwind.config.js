@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       poppins: 'Poppins',
+      manrope: 'Manrope',
     },
     fontSize: {
       xs: [

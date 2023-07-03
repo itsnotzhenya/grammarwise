@@ -6,7 +6,7 @@
   <title>Grammarwise</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Actor&family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../public/styles.css">
   <link rel="stylesheet" href="reset.css">
 </head>
@@ -64,7 +64,7 @@
           Maximize your teaching potential <span class="emphasis">with our innovative toolkit.</span>
         </h1>
         <div class="flex flex-col gap-y-[15px] sm:flex-row">
-          <input class="input bg-[#2B2B2B] h-[52px] px-[16px] py-[14px] rounded sm:w-[300px] sm:rounded-none sm:rounded-l" type="email" placeholder="Your work email address"/>
+          <input class="bg-[#2B2B2B] h-[52px] px-[16px] py-[14px] rounded placeholder:font-manrope placeholder:text-xs placeholder:font-normal placeholder:text-[#f2f2f2] placeholder:opacity-50 sm:w-[300px] sm:rounded-none sm:rounded-l" type="email" placeholder="Your work email address"/>
           <button class="bg-[#865FDB] h-[70px] px-[24px] py-[14px] rounded text-[16px] sm:h-[52px] sm:w-[144px] sm:text-xs sm:p-[14px] sm:rounded-none sm:rounded-r">Join the waitlist</button>
         </div>
       </div>
@@ -111,28 +111,28 @@
   </div>
   <!-- End Header -->
   <!-- Main -->
-  <main class="mt-[100px] px-[17px]">
-    <section class="flex flex-col items-center">
+  <main class="mt-[100px] mb-[120px] mx-auto px-[17px] lg:px-[42px] xl:px-[60px] xl:w-[1170px] xl:mx-auto">
+    <section>
       <header class="flex flex-col items-center">
-        <h2 class="text-lg">Interface:</h2>
-        <p class="text-base text-center">Join our community of passionate teachers who have harnessed the power of our interface to deliver transformative language lessons.</p>
+        <h2 class="text-lg mb-[10px] lg:mb-[20px]">Interface:</h2>
+        <p class="text-base text-center max-w-[710px]">Join our community of passionate teachers who have harnessed the power of our interface to deliver transformative language lessons.</p>
       </header>
       <!-- Cards -->
-      <div class="mt-[50px] flex flex-row  justify-center flex-wrap gap-y-[20px] items-center">
-        <div class="relative flex flex-col items-center justify-center rounded-[20px] bg-[#F7F7F7] mx-[10px] py-[30px] px-[15px] w-[340px] h-[450px]">
+      <div class="interface-cards mt-[50px] flex flex-row justify-center items-center flex-wrap gap-y-[20px]">
+        <div class="interface-card relative flex flex-col items-center justify-center rounded-[20px] bg-[#F7F7F7] mx-[10px] py-[30px] px-[15px] max-w-[340px] lg:max-w-full w-full h-[450px]">
           <img src="../public/screen1.svg" alt=""/>
           <img class="absolute top-[85px] right-[10px] w-[290px]" src="../public/screen2.svg" alt=""/>
           <h3 class="text-md text-center mt-[80px]">Simplicity in design.</h3>
           <p class="text-sm text-center">Collaborate with a teacher to craft interactive tasks.</p>
         </div>
-        <div class="bg-[url(../public/vector1-mobile.svg)] bg-no-repeat bg-bottom flex flex-col items-center justify-center rounded-[20px] bg-[#F7F7F7] mx-[10px] py-[30px] px-[15px] w-[340px] h-[450px]">
+        <div class="interface-card bg-[url(../public/vector1-mobile.svg)] bg-no-repeat bg-bottom flex flex-col items-center justify-center rounded-[20px] bg-[#F7F7F7] mx-[10px] py-[30px] px-[15px] max-w-[340px] lg:max-w-full w-full h-[450px]">
           <img class="w-full h-[286px]" src="../public/screen5.svg" alt=""/>
         </div>
-        <div class="bg-[url(../public/vector2-mobile.svg)] bg-no-repeat flex flex-col items-center justify-center rounded-[20px] bg-[#F7F7F7] mx-[10px] py-[30px] px-[15px] w-[340px] h-[450px]">
+        <div class="interface-card bg-[url(../public/vector2-mobile.svg)] bg-no-repeat flex flex-col items-center justify-center rounded-[20px] bg-[#F7F7F7] mx-[10px] py-[30px] px-[15px] max-w-[340px] lg:max-w-full w-full h-[450px]">
           <img src="../public/whiteboard.svg" alt="" />
           <p class="text-sm text-center mt-[47px]">If you can't write, you should draw.</p>
         </div>
-        <div class="relative flex flex-col items-center justify-center rounded-[20px] bg-[#F7F7F7] mx-[10px] py-[30px] px-[15px] w-[340px] h-[450px]">
+        <div class="interface-card relative flex flex-col items-center justify-center rounded-[20px] bg-[#F7F7F7] mx-[10px] py-[30px] px-[15px] max-w-[340px] lg:max-w-full w-full h-[450px]">
           <img src="../public/screen3.svg" alt=""/>
           <img class="absolute" src="../public/screen4.svg" alt=""/>
           <h3 class="text-md text-center mt-[60px]">Embrace the digital classroom.</h3>
@@ -142,9 +142,33 @@
       <!-- End Cards -->
     </section>
     <section class="mt-[90px]">
-      <header class="flex flex-col items-center">
-        <h2 class="text-lg">Personalized homework generator</h2>
+      <header class="flex flex-col items-center gap-y-[8px] lg:flex-row lg:justify-between">
+        <h2 class="text-[28px] font-bold leading-[42px] lg:text-lg lg:max-w-[550px]">Personalized<br class="hidden lg:inline"> homework generator</h2>
+        <p class="shrink-0 font-normal text-right">AI-powered homework generator that<br class="lg:hidden"/> creates tailored<br class="hidden lg:inline"/> exercises based on the student’s interests, hobbies,<br class="hidden lg:inline"/> and previously completed lessons.</p>
       </header>
+      <!-- Cards -->
+      <div class="personalized-cards flex flex-row flex-wrap justify-center gap-y-[10px] gap-x-[10px] mt-[20px]">
+        <div class="personalized-card overflow-hidden flex flex-col items-center justify-center rounded-[20px] bg-[#B4FE53] h-[312px] max-w-[340px] lg:max-w-full w-full px-[15px] lg:h-[210px]">
+          <p class="font-manrope text-center text-xs">Lina Vang, Gabriela O'Ryan,<br class="xl:hidden"> and 527 others on the waitlist.</p>
+          <div class="flex flex-col items-center lg:flex-row lg:mt-[14px]">
+            <input class="w-full max-w-[300px] min-w-[254px] h-[52px] bg-white py-[14px] px-[16px] rounded-[5px] mt-[10px] lg:mt-0 lg:rounded-none lg:rounded-l placeholder:font-manrope placeholder:text-xs placeholder:font-normal placeholder:text-[#828282] placeholder:opacity-50" type="email" placeholder="Enter your email"/>
+            <button class="bg-black py-[14px] px-[24px] rounded-[5px] text-white text-xs font-manrope mt-[20px] max-w-[180px] h-[52px] lg:shrink-0 lg:mt-0 lg:p-[14px] lg:rounded-none lg:rounded-r">Request access</button>
+          </div>
+        </div>
+        <div class="personalized-card overflow-hidden relative flex items-end h-[312px] max-w-[340px] lg:max-w-full w-full bg-[url(../public/card-screens.svg)] bg-no-repeat bg-right-top lg:bg-[length:430px_397px] rounded-[20px] border-[0.5px] border-solid border-[#bdbdbd4d] bg-[#F7F7F7] lg:h-auto">
+          <img class="lg:w-[320px]" src="../public/cardbg.svg" />
+          <img class="absolute bottom-[35px] left-[15px] w-[110px] h-[38px] lg:w-[120px] lg:h-[42px] lg:left-[24px] lg:bottom-[48px]" src="../public/cardtext.svg" />
+        </div>
+        <div class="personalized-card overflow-hidden relative flex items-end h-[210px] max-w-[340px] lg:max-w-full w-full bg-[#865FDB] rounded-[20px] px-[16px] pb-[30px]">
+          <img class="absolute top-[20px] right-[16px]" src="../public/arrow.svg"/>
+          <h3 class="text-[24px] leading-[32px] text-white font-semibold">Extra options</h3>
+        </div>
+        <div class="personalized-card overflow-hidden relative flex items-end h-[210px] max-w-[340px] lg:max-w-full w-full bg-black rounded-[20px] px-[16px] pb-[30px]">
+          <img class="absolute top-[20px] right-[16px]" src="../public/arrow.svg"/>
+          <h3 class="text-[24px] leading-[32px] text-white font-semibold">About us</h3>
+        </div>
+      </div>
+      <!-- End Cards -->
     </section>
   </main>
   <!-- End Main -->
