@@ -572,6 +572,21 @@ video {
   margin-right: auto;
 }
 
+.my-\[54px\] {
+  margin-top: 54px;
+  margin-bottom: 54px;
+}
+
+.my-\[50px\] {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.my-\[40px\] {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 .mb-\[10px\] {
   margin-bottom: 10px;
 }
@@ -628,6 +643,14 @@ video {
   margin-top: 90px;
 }
 
+.mb-\[37px\] {
+  margin-bottom: 37px;
+}
+
+.mb-\[47px\] {
+  margin-bottom: 47px;
+}
+
 .flex {
   display: flex;
 }
@@ -676,6 +699,18 @@ video {
   height: 70px;
 }
 
+.h-\[\] {
+  height: ;
+}
+
+.h-\[24px\] {
+  height: 24px;
+}
+
+.h-\[240px\] {
+  height: 240px;
+}
+
 .w-0 {
   width: 0px;
 }
@@ -708,6 +743,18 @@ video {
   width: 100%;
 }
 
+.w-\[\] {
+  width: ;
+}
+
+.w-\[151px\] {
+  width: 151px;
+}
+
+.w-\[173px\] {
+  width: 173px;
+}
+
 .min-w-\[254px\] {
   min-width: 254px;
 }
@@ -734,6 +781,10 @@ video {
 
 .max-w-\[710px\] {
   max-width: 710px;
+}
+
+.max-w-\[580px\] {
+  max-width: 580px;
 }
 
 .shrink-0 {
@@ -896,6 +947,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#1F1F1F\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 31 31 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\.\.\/public\/card-screens\.svg\)\] {
   background-image: url(../public/card-screens.svg);
 }
@@ -958,6 +1014,16 @@ video {
 .py-\[30px\] {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.px-\[27px\] {
+  padding-left: 27px;
+  padding-right: 27px;
+}
+
+.py-\[54px\] {
+  padding-top: 54px;
+  padding-bottom: 54px;
 }
 
 .pb-\[30px\] {
@@ -1025,6 +1091,10 @@ video {
   font-weight: 700;
 }
 
+.text-\[12px\] {
+  font-size: 12px;
+}
+
 .font-black {
   font-weight: 900;
 }
@@ -1053,9 +1123,21 @@ video {
   line-height: 50px;
 }
 
+.leading-\[12px\] {
+  line-height: 12px;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-80 {
+  opacity: 0.8;
 }
 
 .ring-0 {
@@ -1341,9 +1423,39 @@ body {
 }
 
 @media (min-width: 768px) {
+  .md\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
   .md\:gap-x-\[40px\] {
     -moz-column-gap: 40px;
          column-gap: 40px;
+  }
+
+  .md\:py-\[30px\] {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
@@ -1475,6 +1587,11 @@ body {
   .lg\:py-\[30px\] {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+
+  .lg\:px-\[4\] {
+    padding-left: 4;
+    padding-right: 4;
   }
 
   .lg\:text-2xl {
