@@ -11,8 +11,40 @@
   <link rel="stylesheet" href="reset.css">
 </head>
 <body>
+  <section class="modal-hidden modal overflow-hidden">
+    <header class="flex flex-row justify-between items-center border-b border-solid border-[#464646] px-[16px] py-[20px]">
+      <button>
+        <img class="w-[40px] h-[40px] lg:w-[50px] lg:h-[50px]" src="../public/modal-arrow.svg"/>
+      </button>
+      <img class="w-[120px] lg:w-[170px]" src="../public/logo.svg"/>
+      <button class="btn-close cursor-pointer">
+        <img class="w-[40px] h-[40px] lg:w-[50px] lg:h-[50px]" src="../public/modal-cross.svg"/>
+      </button>
+    </header>
+    <main class="modal-content px-[16px] lg:px-[225px] flex flex-col items-center">
+      <ul class="flex flex-row justify-center gap-x-[30px] mt-[50px] mb-[34px] lg:mt-[53px] lg:mb-[80px]">
+        <li class="cursor-pointer">
+          <a class="active modal-link text-white text-sm font-[500] lg:text-base">About Us</a>
+        </li>
+        <li class="cursor-pointer">
+          <a class="modal-link text-white text-sm font-[500] lg:text-base">Contact Us</a>
+        </li>
+      </ul>
+      <div id="about" class="max-w-[710px]">
+        <h2 class="hidden lg:block text-white text-lg font-semibold mb-[20px]">About us</h2>
+        <p class="text-white text-xs lg:text-base lg:font-normal font-normal mb-[10px] lg:mb-[14px]">We're a passionate team of developers and designers dedicated to mastering foreign languages. Our firsthand language-learning experiences inspire us to create a platform that truly connects with teachers and students.</p>
+        <p class="text-white text-xs lg:text-base lg:font-normal font-normal opacity-80">With our platform, you'll have the tools and resources at your fingertips to create memorable and effective lessons, leaving a lasting impact on your students' language proficiency and passion for learning.</p>
+      </div>
+      <div id="contact" class="max-w-[710px] hidden">
+        <h2 class="hidden lg:block text-white text-lg font-semibold mb-[20px]">Contact us</h2>
+        <p class="text-white text-xs lg:text-base lg:font-normal font-normal">We understand that each student is unique, which is why our platform emphasizes flexibility and customization. Teachers have the freedom to adapt and personalize the templates to suit the specific needs and interests of their students.</p>
+      </div>
+      <button id="modal-btn" class="bg-[#865FDB] py-[14px] px-[24px] mt-[50px] mb-[68px] lg:mt-[36px] lg:mb-[68px] rounded-[5px] text-white text-xs font-manrope mt-[20px] h-[48px] cursor-pointer">Let's connect</button>
+    </main>
+  </section>
+  <div class="overlay hidden"></div>
   <!-- Header -->
-  <div class="background overflow-x-hidden">
+  <div class="background overflow-x-hidden w-full">
     <header class="header w-full flex flex-col items-center">
       <div class="flex flex-wrap justify-between items-center w-full max-w-[1280px] px-[17px] py-[15px] lg:px-[90px] lg:py-[30px]">
         <!-- Logo -->
@@ -164,7 +196,9 @@
           <h3 class="text-[24px] leading-[32px] text-white font-semibold">Extra options</h3>
         </div>
         <div class="personalized-card overflow-hidden relative flex items-end h-[210px] max-w-[340px] lg:max-w-full w-full bg-black rounded-[20px] px-[16px] pb-[30px]">
-          <img class="absolute top-[20px] right-[16px]" src="../public/arrow.svg"/>
+          <button class="cursor-pointer">
+            <img class="btn-open absolute top-[20px] right-[16px]" src="../public/arrow.svg"/>
+          </button>
           <h3 class="text-[24px] leading-[32px] text-white font-semibold">About us</h3>
         </div>
       </div>
@@ -189,5 +223,6 @@
     </nav>
     <p class="text-[12px] leading-[12px] opacity-50 mb-[47px] md:hidden">@ 2023 GrammarwiseAi</p>
   </footer>
+  <script src="./modal.js"></script>
 </body>
 </html>

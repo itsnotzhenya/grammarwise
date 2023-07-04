@@ -4,6 +4,24 @@
 
 body {
   font-family: 'Poppins';
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-hidden {
+  display: none !important;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(70, 70, 70, 0.70);
+  z-index: 1;
 }
 
 .header {
@@ -85,4 +103,36 @@ body {
   background: -webkit-linear-gradient(rgba(134, 95, 219, 1), rgba(98, 40, 223, 1));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.modal {
+  margin: 0 18px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1162px;
+  min-height: 250px;
+  position: absolute;
+  bottom: 120px;
+  background-color: black;
+  border-radius: 8px;
+}
+
+@media (min-width:768px) {
+  .modal{
+    bottom: 10%;
+  }
+}
+
+.modal-content {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../public/modal-bg.svg);
+  background-repeat: repeat-x;
+  background-position: right;
+  background-size: 25%;
+}
+
+.active {
+  border-bottom: 1px solid #865FDB;
+  color: #865FDB;
 }
