@@ -546,16 +546,16 @@ video {
   left: 15px;
 }
 
+.left-\[420px\] {
+  left: 420px;
+}
+
+.left-\[435px\] {
+  left: 435px;
+}
+
 .right-\[16px\] {
   right: 16px;
-}
-
-.right-\[20px\] {
-  right: 20px;
-}
-
-.right-\[45px\] {
-  right: 45px;
 }
 
 .top-0 {
@@ -638,6 +638,10 @@ video {
 
 .mt-\[90px\] {
   margin-top: 90px;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -1112,28 +1116,12 @@ body {
   align-items: center;
 }
 
-.modal-hidden {
-  display: none !important;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(70, 70, 70, 0.7);
-  z-index: 1;
-}
-
 .header {
   color: #fff;
-  background-image: url(../public/heroimage-mobile.svg);
-  background-size: 340px 300px;
+  background-image: url(../public/heroimage-mobile.png);
+  background-size: 220px;
   background-repeat: no-repeat;
-  background-position: right -65px bottom;
+  background-position: right bottom;
 }
 
 .background {
@@ -1148,7 +1136,6 @@ body {
     #1f1f1f 100%
   );
   background-size: 280px;
-  background-position: -74px;
 }
 
 @media (min-width: 640px) {
@@ -1172,15 +1159,28 @@ body {
         rgba(31, 31, 31, 0) 0%,
         #1f1f1f 100%
       ),
-      url(../public/heroimage-desktop.svg);
-    background-size: 530px 230px, 480px 420px;
+      url(../public/heroimage-desktop.png);
+    background-size: 530px 230px, 260px 370px;
+    background-position: right -20px bottom;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    background-image: linear-gradient(
+        180deg,
+        rgba(31, 31, 31, 0) 0%,
+        #1f1f1f 100%
+      ),
+      url(../public/heroimage-desktop.png);
+    background-size: 530px 230px, 320px 450px;
   }
 }
 
 @media (min-width: 1024px) {
   .header {
-    background-size: 530px 410px, 680px 620px;
-    background-position: right bottom, right -135px bottom 30px;
+    background-size: 530px 410px, 450px 640px;
+    background-position: right bottom, right -25px bottom;
   }
 
   .personalized-cards {
@@ -1217,7 +1217,7 @@ body {
 
 @media (min-width: 1440px) {
   .header {
-    background-position: right bottom, right -120px bottom 130px;
+    background-position: right bottom, right bottom 130px;
   }
 }
 
@@ -1230,24 +1230,11 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.modal {
-  margin: 0 18px;
-  z-index: 2;
-  display: flex;
+#dialog {
   flex-direction: column;
   justify-content: center;
-  max-width: 1162px;
-  min-height: 250px;
-  position: absolute;
-  bottom: 120px;
   background-color: black;
   border-radius: 8px;
-}
-
-@media (min-width: 768px) {
-  .modal {
-    bottom: 10%;
-  }
 }
 
 .modal-content {
@@ -1271,7 +1258,7 @@ body {
   width: 27px;
   overflow: visible;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 /* LINES */
@@ -1332,7 +1319,7 @@ body {
 }
 
 #mobile-menu {
-  z-index: 1;
+  z-index: 3;
   min-width: 100%;
   min-height: 100%;
   position: fixed;
@@ -1354,6 +1341,43 @@ body {
 
 .noscroll {
   overflow: hidden;
+}
+
+.m-scroll {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.row,
+.row-slow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  transition: all 1s ease;
+}
+
+.row > div {
+  display: flex;
+  animation: scrollText 20s infinite linear;
+}
+
+.row-slow > div {
+  display: flex;
+  animation: scrollText 30s infinite linear;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-103%);
+  }
 }
 
 .placeholder\:font-manrope::-moz-placeholder {
@@ -1413,14 +1437,6 @@ body {
 }
 
 @media (min-width: 640px) {
-  .sm\:block {
-    display: block;
-  }
-
-  .sm\:hidden {
-    display: none;
-  }
-
   .sm\:h-\[52px\] {
     height: 52px;
   }
@@ -1470,6 +1486,10 @@ body {
 
   .md\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:hidden {
@@ -1541,6 +1561,11 @@ body {
     z-index: 1;
   }
 
+  .lg\:my-\[53px\] {
+    margin-top: 53px;
+    margin-bottom: 53px;
+  }
+
   .lg\:mb-\[10px\] {
     margin-bottom: 10px;
   }
@@ -1565,10 +1590,6 @@ body {
     margin-bottom: 68px;
   }
 
-  .lg\:mb-\[80px\] {
-    margin-bottom: 80px;
-  }
-
   .lg\:mt-0 {
     margin-top: 0px;
   }
@@ -1585,10 +1606,6 @@ body {
     margin-top: 36px;
   }
 
-  .lg\:mt-\[53px\] {
-    margin-top: 53px;
-  }
-
   .lg\:block {
     display: block;
   }
@@ -1599,6 +1616,10 @@ body {
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:h-\[210px\] {
+    height: 210px;
   }
 
   .lg\:h-\[330px\] {
@@ -1619,10 +1640,6 @@ body {
 
   .lg\:h-auto {
     height: auto;
-  }
-
-  .lg\:h-\[210px\] {
-    height: 210px;
   }
 
   .lg\:w-\[120px\] {
@@ -1649,12 +1666,20 @@ body {
     width: 600px;
   }
 
+  .lg\:w-full {
+    width: 100%;
+  }
+
   .lg\:min-w-\[688px\] {
     min-width: 688px;
   }
 
-  .lg\:max-w-\[250px\] {
-    max-width: 250px;
+  .lg\:max-w-\[240px\] {
+    max-width: 240px;
+  }
+
+  .lg\:max-w-\[270px\] {
+    max-width: 270px;
   }
 
   .lg\:max-w-\[300px\] {
@@ -1736,9 +1761,9 @@ body {
     padding: 14px;
   }
 
-  .lg\:px-\[225px\] {
-    padding-left: 225px;
-    padding-right: 225px;
+  .lg\:px-\[200px\] {
+    padding-left: 200px;
+    padding-right: 200px;
   }
 
   .lg\:px-\[30px\] {
@@ -1801,6 +1826,10 @@ body {
     bottom: 10px;
   }
 
+  .xl\:bottom-\[20px\] {
+    bottom: 20px;
+  }
+
   .xl\:bottom-\[60px\] {
     bottom: 60px;
   }
@@ -1809,13 +1838,25 @@ body {
     left: 20px;
   }
 
-  .xl\:right-\[10px\] {
-    right: 10px;
+  .xl\:left-\[505px\] {
+    left: 505px;
+  }
+
+  .xl\:left-\[530px\] {
+    left: 530px;
   }
 
   .xl\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .xl\:mb-\[80px\] {
+    margin-bottom: 80px;
+  }
+
+  .xl\:mb-\[84px\] {
+    margin-bottom: 84px;
   }
 
   .xl\:flex {
@@ -1850,6 +1891,10 @@ body {
     width: 150px;
   }
 
+  .xl\:w-\[300px\] {
+    width: 300px;
+  }
+
   .xl\:w-\[320px\] {
     width: 320px;
   }
@@ -1878,14 +1923,19 @@ body {
     padding: 0px;
   }
 
-  .xl\:px-\[80px\] {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
-
   .xl\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .xl\:px-\[225px\] {
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+
+  .xl\:px-\[80px\] {
+    padding-left: 80px;
+    padding-right: 80px;
   }
 
   .xl\:text-sm {
