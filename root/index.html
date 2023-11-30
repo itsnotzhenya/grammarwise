@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grammarwise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Poppins:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../root/styles.css" />
+    <link rel="stylesheet" href="reset.css" />
+  </head>
+  <body>
+    <!-- Modal -->
+    <dialog id="dialog">
+      <header
+        class="flex flex-row justify-between items-center border-b border-solid border-[#464646] px-[16px] py-[20px]"
+      >
+        <button class="btn-close">
+          <img
+            class="w-[40px] h-[40px] lg:w-[50px] lg:h-[50px]"
+            src="../public/modal-arrow.svg"
+            alt="back"
+            loading="lazy"
+          />
+        </button>
+        <img
+          class="w-[120px] lg:w-[170px]"
+          src="../public/logo.svg"
+          alt="Grammarwise"
+          loading="lazy"
+        />
+        <button class="btn-close">
+          <img
+            class="w-[40px] h-[40px] lg:w-[50px] lg:h-[50px]"
+            src="../public/modal-cross.svg"
+            alt="close"
+            loading="lazy"
+          />
+        </button>
+      </header>
+      <div
+        class="modal-content px-[16px] lg:px-[200px] xl:px-[225px] flex flex-col items-center"
+      >
+        <div
+          class="flex flex-row justify-center gap-x-[30px] mt-[50px] mb-[34px] lg:my-[53px] xl:mb-[80px]"
+        >
+          <button
+            class="active modal-menu-btn text-white text-sm font-[500] lg:text-base"
+          >
+            About Us
+          </button>
+          <button
+            class="modal-menu-btn text-white text-sm font-[500] lg:text-base"
+          >
+            Contact Us
+          </button>
+        </div>
+        <div id="about" class="max-w-[710px]">
+          <h2
+            class="hidden lg:block text-white text-lg font-semibold mb-[20px]"
+          >
+            About us
+          </h2>
+          <p
+            class="text-white text-xs lg:text-sm lg:font-normal font-normal mb-[10px] lg:mb-[14px]"
+          >
+            We're a passionate team of developers and designers dedicated to
+            mastering foreign languages. Our firsthand language-learning
+            experiences inspire us to create a platform that truly connects with
+            teachers and students.
+          </p>
+          <p
+            class="text-white text-xs lg:text-sm lg:font-normal font-normal opacity-80"
+          >
+            With our platform, you'll have the tools and resources at your
+            fingertips to create memorable and effective lessons, leaving a
+            lasting impact on your students' language proficiency and passion
+            for learning.
+          </p>
+        </div>
+        <div id="contact" class="max-w-[710px] hidden">
+          <h2
+            class="hidden lg:block text-white text-lg font-semibold mb-[20px]"
+          >
+            Contact us
+          </h2>
+          <p class="text-white text-xs lg:text-sm lg:font-normal font-normal">
+            We understand that each student is unique, which is why our platform
+            emphasizes flexibility and customization. Teachers have the freedom
+            to adapt and personalize the templates to suit the specific needs
+            and interests of their students.
+          </p>
+        </div>
+        <button
+          id="modal-btn"
+          class="bg-[#865FDB] py-[14px] px-[24px] mt-[50px] mb-[68px] lg:mt-[36px] lg:mb-[68px] xl:mb-[84px] rounded-[5px] text-white text-xs font-manrope mt-[20px] h-[48px]"
+        >
+          Let's connect
+        </button>
+      </div>
+    </dialog>
+    <!-- End Modal -->
+    <!-- Header -->
+    <div class="background overflow-x-hidden w-full">
+      <!-- Mobile menu -->
+      <div id="mobile-menu">
+        <ul class="flex flex-col gap-y-[10px]">
+          <li class="cursor-pointer text-[24px] text-white">
+            <a href="#">About</a>
+          </li>
+          <li class="cursor-pointer text-[24px] text-white">
+            <a href="#">How it work</a>
+          </li>
+          <li class="cursor-pointer text-[24px] text-white">
+            <a href="#">Pricing</a>
+          </li>
+          <li class="cursor-pointer text-[24px] text-white">
+            <a href="#">Solution</a>
+          </li>
+          <li class="cursor-pointer text-[24px] text-white">
+            <a href="#">Features</a>
+          </li>
+        </ul>
+      </div>
+      <!-- End Mobile menu -->
+      <header class="header w-full flex flex-col items-center text-white">
+        <div
+          class="flex flex-wrap justify-between items-center w-full max-w-[1280px] px-[17px] py-[15px] lg:px-[90px] lg:py-[30px] xl:px-0"
+        >
+          <img src="../public/logo.svg" alt="Grammarwise" />
+          <!-- Navigation -->
+          <nav class="hidden md:block">
+            <ul class="flex gap-x-[20px] md:gap-x-[40px]">
+              <li class="cursor-pointer">
+                <a href="#">About</a>
+              </li>
+              <li class="cursor-pointer">
+                <a href="#">How it work</a>
+              </li>
+              <li class="cursor-pointer">
+                <a href="#">Pricing</a>
+              </li>
+              <li class="cursor-pointer">
+                <a href="#">Solution</a>
+              </li>
+              <li class="cursor-pointer">
+                <a href="#">Features</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- End Navigation -->
+          <button id="burger-menu" class="md:hidden">
+            <span class="burger-line"></span>
+          </button>
+        </div>
+        <div
+          class="px-[33px] mt-[50px] mb-[94px] lg:mt-[110px] lg:mb-[160px] xl-[130px]"
+        >
+          <h1
+            class="mb-[30px] text-[40px] leading-[50px] font-black max-w-[600px] font-poppins lg:max-w-[800px] lg:text-2xl"
+          >
+            Maximize your teaching potential
+            <span class="emphasis">with our innovative toolkit.</span>
+          </h1>
+          <div class="flex flex-col gap-y-[15px] sm:flex-row">
+            <input
+              class="bg-[#2B2B2B] h-[52px] px-[16px] py-[14px] rounded placeholder:font-manrope placeholder:text-xs placeholder:font-normal placeholder:text-[#f2f2f2] placeholder:opacity-50 sm:w-[300px] sm:rounded-none sm:rounded-l"
+              type="email"
+              placeholder="Your work email address"
+            />
+            <button
+              class="bg-[#865FDB] h-[70px] px-[24px] py-[14px] rounded text-[16px] sm:h-[52px] sm:w-[144px] sm:text-xs sm:p-[14px] sm:rounded-none sm:rounded-r"
+            >
+              Join the waitlist
+            </button>
+          </div>
+        </div>
+        <!-- Animated block  -->
+        <div
+          class="m-scroll flex flex-col gap-y-[10px] mb-[20px] overflow-hidden lg:mb-[40px] min-[1440px]:mb-[90px]"
+        >
+          <div class="row gap-x-[40px]">
+            <div class="flex flex-row gap-x-[40px] shrink-0">
+              <div class="flex flex-row items-center shrink-0">
+                <img src="../public/icon8.svg" alt="" loading="lazy" />
+                <p class="text-base font-normal whitespace-nowrap ml-[20px]">
+                  GrammarwiseAI can extract text from
+                </p>
+              </div>
+              <div class="flex flex-row items-center shrink-0">
+                <img src="../public/icon7.svg" alt="" loading="lazy" />
+                <p class="text-base font-normal whitespace-nowrap ml-[20px]">
+                  point out mistakes
+                </p>
+              </div>
+              <div class="flex flex-row items-center shrink-0">
+                <img src="../public/icon6.svg" alt="" loading="lazy" />
+                <p class="text-base font-normal whitespace-nowrap ml-[20px]">
+                  extract text from YouTube videos, books
+                </p>
+              </div>
+              <div class="flex flex-row items-center shrink-0">
+                <img src="../public/icon4.svg" alt="" loading="lazy" />
+                <p class="text-base font-normal whitespace-nowrap ml-[20px]">
+                  today’s tech-savvy students
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-row gap-x-[40px] shrink-0">
+              <div class="flex flex-row items-center shrink-0">
+                <img src="../public/icon8.svg" alt="" loading="lazy" />
+                <p class="text-base font-normal whitespace-nowrap ml-[20px]">
+                  GrammarwiseAI can extract text from
+                </p>
+              </div>
+              <div class="flex flex-row items-center shrink-0">
+                <img src="../public/icon7.svg" alt="" loading="lazy" />
+                <p class="text-base font-normal whitespace-nowrap ml-[20px]">
+                  point out mistakes
+                </p>
+              </div>
+              <div class="flex flex-row items-center shrink-0">
+                <img src="../public/icon6.svg" alt="" loading="lazy" />
+                <p class="text-base font-normal whitespace-nowrap ml-[20px]">
+                  extract text from YouTube videos, books
+                </p>
+              </div>
+              <div class="flex flex-row items-center shrink-0">
+                <img src="../public/icon4.svg" alt="" loading="lazy" />
+                <p class="text-base font-normal whitespace-nowrap ml-[20px]">
+                  today’s tech-savvy students
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row-slow gap-x-[40px]">
+            <div class="flex flex-row gap-x-[40px] shrink-0">
+              <div class="flex flex-row items-center shrink-0">
+                <img src="../public/icon5.svg" alt="" loading="lazy" />
+                <p class="text-base font-normal whitespace-nowrap ml-[20px]">
+                  AI-powered homework generator
+                </p>
+              </div>
+              <div class="flex flex-row items-center shrink-0">
+                <img src="../public/icon3.svg" alt="" loading="lazy" />
+                <p class="text-base font-normal whitespace-nowrap ml-[20px]">
+                  real-time assistance
+                </p>
+              </div>
+              <div class="flex flex-row items-center shrink-0">
+                <img src="../public/icon1.svg" alt="" loading="lazy" />
+                <p class="text-base font-normal whitespace-nowrap ml-[20px]">
+                  immersive learning experience
+                </p>
+              </div>
+              <div class="flex flex-row items-center shrink-0">
+                <img src="../public/icon2.svg" alt="" loading="lazy" />
+                <p class="text-base font-normal whitespace-nowrap ml-[20px]">
+                  learning more enjoyable and effective
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-row gap-x-[40px] shrink-0">
+              <div class="flex flex-row items-center shrink-0">
+                <img src="../public/icon5.svg" alt="" loading="lazy" />
+                <p class="text-base font-normal whitespace-nowrap ml-[20px]">
+                  AI-powered homework generator
+                </p>
+              </div>
+              <div class="flex flex-row items-center shrink-0">
+                <img src="../public/icon3.svg" alt="" loading="lazy" />
+                <p class="text-base font-normal whitespace-nowrap ml-[20px]">
+                  real-time assistance
+                </p>
+              </div>
+              <div class="flex flex-row items-center shrink-0">
+                <img src="../public/icon1.svg" alt="" loading="lazy" />
+                <p class="text-base font-normal whitespace-nowrap ml-[20px]">
+                  immersive learning experience
+                </p>
+              </div>
+              <div class="flex flex-row items-center shrink-0">
+                <img src="../public/icon2.svg" alt="" loading="lazy" />
+                <p class="text-base font-normal whitespace-nowrap ml-[20px]">
+                  learning more enjoyable and effective
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- End Header -->
+    <!-- Main -->
+    <main
+      class="mt-[100px] mb-[120px] mx-auto px-[17px] lg:px-[42px] xl:p-0 xl:w-[1160px] xl:mx-auto"
+    >
+      <section>
+        <header class="flex flex-col items-center">
+          <h2 class="text-lg mb-[10px] lg:mb-[20px]">Interface:</h2>
+          <p class="text-base text-center max-w-[710px]">
+            Join our community of passionate teachers who have harnessed the
+            power of our interface to deliver transformative language lessons.
+          </p>
+        </header>
+        <!-- Cards -->
+        <div
+          class="mt-[50px] flex flex-row justify-center items-center flex-wrap gap-y-[20px] gap-x-[20px] lg:gap-y-[10px]"
+        >
+          <div
+            class="flex flex-col items-center gap-y-[20px] w-full md:flex-row md:justify-center md:gap-x-[20px] lg:flex-row lg:gap-x-[8px]"
+          >
+            <div
+              class="relative flex flex-col items-center justify-end rounded-[20px] border-[0.5px] border-solid border-[#bdbdbd4d] bg-[#F7F7F7] py-[30px] px-[15px] max-w-[340px] w-full h-[450px] lg:items-start lg:min-w-[688px] lg:px-[30px] lg:h-[388px] lg:max-w-[850px] xl:h-[480px]"
+            >
+              <img
+                class="hidden lg:block absolute w-[475px] h-[272px] lg:top-0 lg:left-0 lg:w-[600px] lg:h-[330px] xl:w-[680px] xl:h-[410px] xl:left-[20px]"
+                src="../public/first-card-screen1.png"
+                alt="interface"
+                loading="lazy"
+              />
+              <img
+                class="hidden lg:block absolute left-[435px] bottom-[30px] w-[240px] xl:w-[320px] xl:left-[505px] xl:bottom-[10px]"
+                src="../public/first-card-screen2.png"
+                alt="interface"
+                loading="lazy"
+              />
+              <img
+                class="absolute top-0 lg:hidden"
+                src="../public/first-card-screens-mobile.png"
+                alt="interface"
+                loading="lazy"
+              />
+              <h2 class="text-md text-center mb-[8px] lg:mb-[10px] lg:z-[1]">
+                Simplicity in design.
+              </h2>
+              <p
+                class="text-sm text-center lg:text-xs lg:font-normal xl:text-sm"
+              >
+                Collaborate with a teacher to craft interactive tasks.
+              </p>
+            </div>
+            <div
+              class="bg-[url(../public/vector1-mobile.svg)] lg:bg-[url(../public/vector1-desktop.svg)] bg-no-repeat bg-bottom flex flex-col items-center justify-center rounded-[20px] border-[0.5px] border-solid border-[#bdbdbd4d] bg-[#F7F7F7] py-[30px] px-[15px] max-w-[340px] w-full h-[450px] lg:relative lg:bg-[length:300px_387px] lg:max-w-[300px] lg:h-[388px] xl:max-w-[300px] xl:h-[480px] xl:p-0 xl:bg-contain"
+            >
+              <img
+                class="lg:absolute lg:max-w-[270px]"
+                src="../public/screens5.png"
+                alt="interface"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center gap-y-[20px] w-full md:flex-row md:justify-center md:gap-x-[20px] lg:flex-row lg:gap-x-[8px]"
+          >
+            <div
+              class="relative bg-[url(../public/vector2-mobile.svg)] lg:bg-[url(../public/vector2-desktop.svg)] bg-no-repeat flex flex-col items-center justify-end rounded-[20px] border-[0.5px] border-solid border-[#bdbdbd4d] bg-[#F7F7F7] py-[30px] px-[15px] max-w-[340px] w-full h-[450px] lg:bg-[length:300px_335px] lg:max-w-[300px] lg:h-[388px] xl:max-w-[300px] xl:h-[480px] xl:bg-contain"
+            >
+              <img
+                class="absolute top-0 max-w-[300px] lg:max-w-[240px] xl:max-w-[300px]"
+                src="../public/whiteboard2x.png"
+                alt="interface"
+                loading="lazy"
+              />
+              <p
+                class="text-sm text-left lg:w-full lg:text-xs lg:font-normal xl:text-sm"
+              >
+                If you can't write, you<br class="hidden lg:inline" />
+                should draw.
+              </p>
+            </div>
+            <div
+              class="relative flex flex-col items-center justify-end rounded-[20px] border-[0.5px] border-solid border-[#bdbdbd4d] bg-[#F7F7F7] py-[30px] px-[15px] max-w-[340px] w-full h-[450px] lg:items-start lg:min-w-[688px] lg:px-[30px] lg:h-[388px] lg:max-w-[850px] xl:h-[480px]"
+            >
+              <img
+                class="hidden lg:block absolute w-[475px] h-[272px] lg:top-0 lg:left-[20px] lg:w-[520px] lg:h-auto xl:w-[680px] xl:h-[410px] xl:left-[20px]"
+                src="../public/embaraced-screens1.png"
+                alt="interface"
+                loading="lazy"
+              />
+              <img
+                class="hidden lg:block absolute left-[420px] bottom-[40px] w-[220px] xl:w-[300px] xl:left-[530px] xl:bottom-[20px]"
+                src="../public/embaraced-screens2.png"
+                alt="interface"
+                loading="lazy"
+              />
+              <img
+                class="absolute top-0 lg:hidden"
+                src="../public/mobile-embrace.png"
+                alt="interface"
+                loading="lazy"
+              />
+              <h2 class="text-md text-center mb-[8px] lg:mb-[10px] lg:z-[1]">
+                Embrace the digital classroom.
+              </h2>
+              <p
+                class="text-sm text-center lg:text-xs lg:font-normal xl:text-sm"
+              >
+                Convenient language learning platform for students.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- End Cards -->
+      </section>
+      <section class="mt-[90px]">
+        <header
+          class="flex flex-col items-center gap-y-[8px] lg:flex-row lg:justify-between"
+        >
+          <h2
+            class="text-[28px] font-bold leading-[42px] lg:text-lg lg:max-w-[550px]"
+          >
+            Personalized<br class="hidden lg:inline" />
+            homework generator
+          </h2>
+          <p class="shrink-0 font-normal text-right max-w-[580px]">
+            AI-powered homework generator that<br class="lg:hidden" />
+            creates tailored<br class="hidden lg:inline" />
+            exercises based on the student’s interests, hobbies,<br
+              class="hidden lg:inline"
+            />
+            and previously completed lessons.
+          </p>
+        </header>
+        <!-- Cards -->
+        <div
+          class="personalized-cards flex flex-row flex-wrap justify-center gap-y-[10px] gap-x-[10px] mt-[20px]"
+        >
+          <div
+            class="personalized-card overflow-hidden flex flex-col items-center justify-center rounded-[20px] bg-[#B4FE53] h-[312px] max-w-[340px] lg:max-w-full w-full px-[15px] lg:h-[210px] xl:h-full"
+          >
+            <p class="font-manrope text-center text-xs">
+              Lina Vang, Gabriela O'Ryan,<br class="xl:hidden" />
+              and 527 others on the waitlist.
+            </p>
+            <div class="flex flex-col items-center lg:flex-row lg:mt-[14px]">
+              <input
+                class="w-full max-w-[300px] min-w-[254px] h-[52px] bg-white py-[14px] px-[16px] rounded-[5px] mt-[10px] lg:mt-0 lg:rounded-none lg:rounded-l placeholder:font-manrope placeholder:text-xs placeholder:font-normal placeholder:text-[#828282] placeholder:opacity-50"
+                type="email"
+                placeholder="Enter your email"
+              />
+              <button
+                class="bg-black py-[14px] px-[24px] rounded-[5px] text-white text-xs font-manrope mt-[20px] max-w-[180px] h-[52px] lg:shrink-0 lg:mt-0 lg:p-[14px] lg:rounded-none lg:rounded-r"
+              >
+                Request access
+              </button>
+            </div>
+          </div>
+          <div
+            class="personalized-card overflow-hidden relative flex items-end h-[312px] max-w-[340px] lg:max-w-full w-full bg-[url(../public/card-screens-bg.png)] bg-contain bg-no-repeat bg-right-top rounded-[20px] border-[0.5px] border-solid border-[#bdbdbd4d] bg-[#F7F7F7] lg:h-auto"
+          >
+            <img
+              class="lg:w-[320px] xl:w-[350px]"
+              src="../public/cardbg.svg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="absolute bottom-[35px] left-[15px] w-[110px] h-[38px] lg:w-[120px] lg:h-[42px] lg:left-[24px] lg:bottom-[48px] xl:w-[150px] xl:h-[52px] xl:bottom-[60px]"
+              src="../public/cardtext.svg"
+              alt="1.2 billion people are learning a foreign language right now!"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="personalized-card overflow-hidden relative flex items-end h-[210px] max-w-[340px] lg:max-w-full w-full bg-[#865FDB] rounded-[20px] px-[16px] pb-[30px]"
+          >
+            <button>
+              <img
+                class="absolute top-[20px] right-[16px]"
+                src="../public/arrow.svg"
+                alt=""
+                loading="lazy"
+              />
+            </button>
+            <h2 class="text-[24px] leading-[32px] text-white font-semibold">
+              Extra options
+            </h2>
+          </div>
+          <div
+            class="personalized-card overflow-hidden relative flex items-end h-[210px] max-w-[340px] lg:max-w-full w-full bg-black rounded-[20px] px-[16px] pb-[30px]"
+          >
+            <button>
+              <img
+                class="btn-open absolute top-[20px] right-[16px]"
+                src="../public/arrow.svg"
+                alt="open"
+                loading="lazy"
+              />
+            </button>
+            <h2 class="text-[24px] leading-[32px] text-white font-semibold">
+              About us
+            </h2>
+          </div>
+        </div>
+        <!-- End Cards -->
+      </section>
+    </main>
+    <!-- End Main -->
+    <!-- Footer -->
+    <footer
+      class="w-full bg-[#1F1F1F] px-[27px] text-white md:py-[30px] lg:px-[42px] xl:px-[80px] xl:flex xl:justify-center"
+    >
+      <div
+        class="max-w-[1280px] w-full flex flex-col items-center md:flex-row md:justify-between md:items-center"
+      >
+        <img
+          class="w-[173px] my-[40px] md:my-0"
+          src="../public/logo.svg"
+          alt="Grammarwise"
+          loading="lazy"
+        />
+        <div class="mb-[37px] md:mb-0">
+          <ul class="flex flex-row gap-x-[20px]">
+            <li class="cursor-pointer">
+              <a
+                href="#"
+                class="text-[12px] leading-[12px] opacity-80 lg:text-sm"
+                >Privacy Policy</a
+              >
+            </li>
+            <li class="cursor-pointer">
+              <a
+                href="#"
+                class="text-[12px] leading-[12px] opacity-80 lg:text-sm"
+                >Terms and Conditions</a
+              >
+            </li>
+            <li class="cursor-pointer">
+              <a
+                href="#"
+                class="text-[12px] leading-[12px] opacity-80 lg:text-sm"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <p class="text-[12px] leading-[12px] opacity-50 mb-[47px] md:hidden">
+          @ 2023 GrammarwiseAi
+        </p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="./burger-menu.js"></script>
+    <script src="./modal.js"></script>
+  </body>
+</html>
